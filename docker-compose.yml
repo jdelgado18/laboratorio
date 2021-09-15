@@ -55,6 +55,8 @@ services:
     build: ./lab-web-image
     ports:
       - 80:80
+    networks:
+      - laboratorio
     depends_on:
       - lab_server1
       - lab_server2
