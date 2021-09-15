@@ -1,0 +1,38 @@
+version: '3'
+services:
+  lab_db2:
+    container_name: db2.laboratorio.com
+    privileged: true
+    image: ibmcom/db2:11.5.4.0
+    ports:
+      - 50000:50000
+    environment:
+      - LICENSE=accept
+      - DB2INST1_PASSWORD=passw0rd
+      - DBNAME=DBLAB
+    #volumes:
+    #  - /db2/data:/database
+    networks:
+      - laboratorio-desarrollo
+  lab_mq:
+    container_name: mq.laboratorio.com
+    ports:
+      - 9444:9443
+      - 1414:1414
+    image: ibmcom/mq
+    environment:
+      - LICENSE=accept
+      - MQ_QMGR_NAME=QM_LABORATORIO
+      - MQ_ADMIN_PASSWORD=passw0rd
+      - MQ_APP_PASSWORD=passw0rd
+    networks:
+      - laboratorio-desarrollo
+  lab_ldap:
+    container_name: ldap.laboratorio.com
+    image: ldap-server
+    ports:
+      - 636:636
+    networks:
+      - laboratorio-desarrollo
+networks:
+  laboratorio-desarrollo:
