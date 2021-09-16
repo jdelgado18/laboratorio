@@ -47,6 +47,7 @@ services:
       - lab_db2
       - lab_mq
       - lab_ldap
+      - lab_server1
   lab_web:
     container_name: www.laboratorio.com
     image: lab-web
