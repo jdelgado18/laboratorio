@@ -2,6 +2,7 @@
 FROM ibmcom/websphere-liberty:kernel-java8-openj9-ubi
 RUN /opt/ibm/wlp/bin/installUtility install localConnector-1.0 ldapRegistry-3.0 sessioncache-1.0
 COPY --chown=1001:0 lib/hazelcast-4.2.2.jar /opt/ibm/wlp/usr/shared/resources/hazelcast/hazelcast.jar
+COPY --from=hazelcast/hazelcast --chown=1001:0 /opt/hazelcast/lib/cache-api-1.1.1.jar /opt/ibm/wlp/usr/shared/resources/hazelcast/cache-api-1.1.1.jar
 COPY --chown=1001:0 server.xml /config/server.xml
 COPY --chown=1001:0 jvm.options /config/jvm.options
 COPY --chown=1001:0 configDropins/defaults/keystore.xml /config/configDropins/defaults/keystore.xml

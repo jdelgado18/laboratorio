@@ -22,4 +22,4 @@
             </tcp-ip>
         </join>
     </network>
-</hazelcast-client>
+</hazelcast>
