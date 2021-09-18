@@ -32,6 +32,8 @@ services:
     container_name: server1.laboratorio.com
     image: lab-server
     build: ./lab-server-image
+    environment:
+      - CLONE_ID=server1
     networks:
       - laboratorio
     depends_on:
@@ -41,6 +43,8 @@ services:
   lab_server2:
     container_name: server2.laboratorio.com
     image: lab-server
+    environment:
+      - CLONE_ID=server2
     networks:
       - laboratorio
     depends_on:
