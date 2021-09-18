@@ -23,7 +23,7 @@ COPY --chown=1001:0 configDropins/overrides/jms.xml /config/configDropins/overri
 
 ### Hazelcast Session Caching ###
 # Copy the Hazelcast libraries from the Hazelcast Docker image
-COPY --from=hazelcast/hazelcast --chown=1001:0 /opt/hazelcast/lib/*.jar /opt/ol/wlp/usr/shared/resources/hazelcast/
+COPY --from=hazelcast/hazelcast --chown=1001:0 /opt/hazelcast/lib/*.jar /opt/ibm/wlp/usr/shared/resources/hazelcast/
 
 # Instruct configure.sh to copy the client topology hazelcast.xml
 # ARG HZ_SESSION_CACHE=client
