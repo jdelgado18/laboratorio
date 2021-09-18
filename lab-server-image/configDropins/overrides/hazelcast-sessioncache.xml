@@ -6,6 +6,9 @@
         <file name="${shared.resource.dir}/hazelcast/hazelcast.jar" />
         <file name="${shared.resource.dir}/hazelcast/cache-api-1.1.1.jar" />
     </library>
-    <httpSessionCache libraryRef="HazelcastLib" uri="file:${shared.config.dir}hazelcast/hazelcast.xml"/>
+    <!-- <httpSessionCache libraryRef="HazelcastLib" uri="file:${shared.config.dir}hazelcast/hazelcast.xml"/> -->
+    <httpSessionCache libraryRef="HazelcastLib">
+        <properties hazelcast.config.location="file:${shared.config.dir}/hazelcast/hazelcast.xml"/>
+    </httpSessionCache>
     <httpSession cloneId="${env.CLONE_ID}"/>
 </server>
