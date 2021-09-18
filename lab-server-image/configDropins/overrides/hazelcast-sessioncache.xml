@@ -5,6 +5,6 @@
     <library id="HazelcastLib">
         <file name="${shared.resource.dir}/hazelcast/hazelcast.jar" />
     </library>
-    <httpSessionCache libraryRef="HazelcastLib" uri="file:${shared.config.dir}/hazelcast/hazelcast.xml"/>
+    <httpSessionCache libraryRef="HazelcastLib" uri="file:${shared.config.dir}hazelcast/hazelcast.xml"/>
     <httpSession cloneId="${env.CLONE_ID}"/>
 </server>
