@@ -1,9 +1,7 @@
 <server>
     <!-- Enable features -->
     <featureManager>
-        <feature>localConnector-1.0</feature>
         <feature>ejbLite-3.2</feature>
-        <feature>ldapRegistry-3.0</feature>
         <feature>wmqJmsClient-2.0</feature>
         <feature>jsp-2.3</feature>
         <feature>appSecurity-3.0</feature>
