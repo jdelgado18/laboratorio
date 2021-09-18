@@ -4,7 +4,7 @@
     </featureManager>
     <library id="HazelcastLib">
         <file name="${shared.resource.dir}/hazelcast/hazelcast.jar" />
-        <file name="${shared.resource.dir}/hazelcast/cache-api-1.1.1.jar" />
+        <!-- <file name="${shared.resource.dir}/hazelcast/cache-api-1.1.1.jar" /> -->
     </library>
     <!-- <httpSessionCache libraryRef="HazelcastLib" uri="file:${shared.config.dir}hazelcast/hazelcast.xml"/> -->
     <httpSessionCache libraryRef="HazelcastLib">
