@@ -8,3 +8,4 @@
     <library id="HazelcastLib">
         <fileset dir="${shared.resource.dir}/hazelcast"/>
     </library>
+</server>
