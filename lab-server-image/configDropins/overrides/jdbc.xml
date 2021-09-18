@@ -1,0 +1,9 @@
+<server>
+    <library id="DB2JCCLib">
+        <fileset dir="/config/resources/lib" includes="db2jcc4.jar db2jcc_license_cu.jar" />
+    </library>
+    <dataSource id="db2" jndiName="jdbc/laboratorio" type="javax.sql.XADataSource">
+        <jdbcDriver libraryRef="DB2JCCLib" />
+        <properties.db2.jcc databaseName="DBLAB" serverName="db2.laboratorio.com" password="{xor}Lz4sLChvLTs=" user="db2inst1" />
+    </dataSource>
+</server>

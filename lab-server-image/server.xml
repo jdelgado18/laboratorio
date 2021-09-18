@@ -1,0 +1,13 @@
+<server description="Servidor de aplicaciones configurado para ejecutar la aplicación de laboratorio">
+
+    <!-- To access this server from a remote client add a host attribute to 
+		the following element, e.g. host="*" -->
+    <httpEndpoint httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint" host="*" />
+
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true" />
+    <applicationMonitor updateTrigger="mbean" />
+
+    <ldapRegistry baseDN="dc=laboratorio,dc=com" bindDN="uid=laboratorio_bnd,ou=Usuarios,ou=Arquitectura,dc=laboratorio,dc=com" bindPassword="{xor}Lz4sLChvLTs=" certificateMapMode="NOT_SUPPORTED" host="ldap.laboratorio.com" id="LDAP Laboratorio" ldapType="Custom" port="636" realm="LdapRegistryLaboratorio" sslEnabled="true" reuseConnection="true">
+    </ldapRegistry>
+</server>

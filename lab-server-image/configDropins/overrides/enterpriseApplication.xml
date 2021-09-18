@@ -1,0 +1,7 @@
+<enterpriseApplication id="laboratorio" location="laboratorio.ear" name="laboratorio">
+    <application-bnd>
+        <security-role id="grupo_squad_was" name="grupo_squad_was">
+            <group id="grupo_squad_owner" name="cn=Squad WAS,ou=Grupos,ou=Arquitectura,dc=laboratorio,dc=com"></group>
+        </security-role>
+    </application-bnd>
+</enterpriseApplication>

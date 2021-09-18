@@ -1,0 +1,13 @@
+<server>
+    <variable name="wmqJmsClient.rar.location" value="/config/resources/jca/wmq.jmsra.rar" />
+    <jmsConnectionFactory id="laboratorio_conn" jndiName="jms/qmlaboratorio">
+        <properties.wmqJms channel="DEV.APP.SVRCONN" hostName="mq.laboratorio.com" queueManager="QM_LABORATORIO" password="{xor}Lz4sLChvLTs=" userName="app" applicationName="laboratorio-web"></properties.wmqJms>
+    </jmsConnectionFactory>
+    <jmsQueue id="cola_app" jndiName="jms/qlaboratorio">
+        <properties.wmqJms baseQueueManagerName="QM_LABORATORIO" baseQueueName="DEV.QUEUE.1"></properties.wmqJms>
+    </jmsQueue>
+    <jmsActivationSpec id="laboratorio/laboratorio-ejb/QueueMDB">
+        <properties.wmqJms destinationRef="cola_app" hostName="mq.laboratorio.com" applicationName="laboratorio-ejb" queueManager="QM_LABORATORIO" channel="DEV.APP.SVRCONN"></properties.wmqJms>
+        <authData user="app" password="{xor}Lz4sLChvLTs="></authData>
+    </jmsActivationSpec>
+</server>
