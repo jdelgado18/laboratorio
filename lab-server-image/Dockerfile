@@ -9,7 +9,7 @@ COPY --chown=1001:0 configDropins/defaults/keystore.xml /config/configDropins/de
 COPY --chown=1001:0 key.p12 /config/resources/security/key.p12
 COPY --chown=1001:0 configDropins/overrides/hazelcast-sessioncache.xml /config/configDropins/overrides/hazelcast-sessioncache.xml
 COPY --chown=1001:0 shared/hazelcast.xml /opt/ibm/wlp/usr/shared/config/hazelcast/hazelcast.xml
-# ENV JAVA_TOOL_OPTIONS="-Dhazelcast.jcache.provider.type=server ${JAVA_TOOL_OPTIONS}"
+ENV JAVA_TOOL_OPTIONS="-Dhazelcast.jcache.provider.type=server ${JAVA_TOOL_OPTIONS}"
 
 # Configuración de aplicación
 RUN /opt/ibm/wlp/bin/installUtility install ejbLite-3.2 wmqJmsClient-2.0 jsp-2.3 mdb-3.2 jpa-2.2 appSecurity-3.0
