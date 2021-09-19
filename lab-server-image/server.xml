@@ -15,4 +15,5 @@
 
   <ldapRegistry baseDN="dc=laboratorio,dc=com" bindDN="uid=laboratorio_bnd,ou=Usuarios,ou=Arquitectura,dc=laboratorio,dc=com" bindPassword="{xor}Lz4sLChvLTs=" certificateMapMode="NOT_SUPPORTED" host="ldap.laboratorio.com" id="LDAP Laboratorio" ldapType="Custom" port="636" realm="LdapRegistryLaboratorio" sslEnabled="true" reuseConnection="true">
   </ldapRegistry>
+  <ltpa keysPassword="{xor}CDo9Hgw=" expiration="525600m"></ltpa>
 </server>

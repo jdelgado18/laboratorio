@@ -7,6 +7,7 @@ COPY --chown=1001:0 server.xml /config/server.xml
 COPY --chown=1001:0 jvm.options /config/jvm.options
 COPY --chown=1001:0 configDropins/defaults/keystore.xml /config/configDropins/defaults/keystore.xml
 COPY --chown=1001:0 key.p12 /config/resources/security/key.p12
+COPY --chown=1001:0 ltpa.keys /config/resources/security/ltpa.keys
 COPY --chown=1001:0 configDropins/overrides/hazelcast-sessioncache.xml /config/configDropins/overrides/hazelcast-sessioncache.xml
 COPY --chown=1001:0 shared/hazelcast.xml /opt/ibm/wlp/usr/shared/config/hazelcast/hazelcast.xml
 ENV JAVA_TOOL_OPTIONS="-Dhazelcast.jcache.provider.type=server ${JAVA_TOOL_OPTIONS}"
